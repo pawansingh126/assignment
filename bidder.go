@@ -42,12 +42,12 @@ func Bidder(){
 			for len(is_complete) !=0{
 				time.Sleep(500 * time.Millisecond)
 			}
-			req_data.Status_msg="Reducing"
-			reducer_chan <- incr
+			req_data.Status_msg="Reducing"]
 			er := RedisSet(req_data, req_str)
 			if er!=nil{
 				panic(er)
 			}
+			reducer_chan <- incr
 		}
 		time.Sleep(2000 * time.Millisecond)
 	}
