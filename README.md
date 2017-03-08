@@ -24,3 +24,5 @@ Reducer module is agaib a "Go Routine" which is constantly looking for request i
 If it finds reducer channel not empty, it also takes out that request id and retrieves all the data from
 Redis. Then according to HTTP statuscodes received for different URLs it groups those URLs accordinf to
 the Statuscode received. Finally it saves all the data in Redis with request status message as "Completed".
+
+--- END ---
